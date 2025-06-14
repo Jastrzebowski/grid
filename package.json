@@ -39,7 +39,9 @@
   "scripts": {
     "build": "vite build",
     "build:watch": "vite build --watch",
-    "dev": "vite dev",
+    "dev": "pnpm dev:react",
+    "dev:react": "cd playgrounds/react && pnpm dev",
+    "dev:all": "echo 'Future: Run all playgrounds simultaneously'",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
@@ -54,6 +56,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@testing-library/react": "^14.1.2",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
@@ -68,14 +71,16 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jsdom": "^23.0.1",
     "prettier": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
     "vite-plugin-dts": "^3.6.4",
     "vitest": "^1.1.0"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": ">=18.0.0 || >=19.0.0",
+    "react-dom": ">=18.0.0 || >=19.0.0"
   },
   "peerDependencyMeta": {
     "react": {
